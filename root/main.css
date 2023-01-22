@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+body {
+	font-family: Monaco, Courier New, Courier, monospace;
+	padding: 2rem;
+	line-height: 1.3;
+}
+
+textarea {
+	background: transparent;
+	border: 0px;
+	color: #fff;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	font-family: monospace;
+	outline: none;
+	resize: none;
+	font-size: 13px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.functions {
+	box-shadow: 0 0 2px red, inset 0 0 2px red;
+	border: 0.2vw solid #ff6666;
+	position: absolute;
+	padding: 10px 10px;
+	top: 10px;
+	right: 10px;
+}
+
+.save {
+	background: #252926;
+	color: #c3ef8f;
+
+	text-shadow: 0 0 1px #c3ef8f, 1px 1px 1px blue, -1px -1px 1px red;
+
+	font-size: 25px;
+	cursor: pointer;
+	border: none;
+}
+
+.save:hover {
+	color: #fff;
+	text-shadow: 0 5px 15px #c3ef8f;
+}
+
+.glitch {
+	min-height: max-content;
+	background: #252926;
+	color: #c3ef8f;
+	animation: crt 5ms infinite;
+	text-shadow: 0 0 1px #c3ef8f, 1px 1px 1px blue, -1px -1px 1px red;
+}
+
+a:link, a:visited {
+	color: #3f3;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+::selection {
+	background: rgba(195, 239, 143, 0.5);
+}
+
+.hover-glow-text {
+	transition: all 0.1s ease-in-out;
+}
+
+.hover-glow-text:hover {
+	color: #fff;
+	text-shadow: 0 5px 15px #c3ef8f;
+}
+
+@keyframes crt {
+	28% {
+		background: #232624;
+	}
+
+	30% {
+		background: #272c28;
+	}
+
+	33% {
+		background: #232624;
+	}
+
+	34% {
+		background: #272c28;
+	}
+
+	35% {
+		background: #202421;
+	}
+}

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <!-- self explanitory -->
+        <meta charset="UTF-8">
+
+        <title>Luabin</title>
+
+        <!-- viewport and main scss (possibly split into multiple files but idk) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+	<body class="glitch">
+		<!-- main text -->
+		<h1 class="hover-glow-text">Luabin</h1>
+
+		<!-- interactables (e.g save) -->
+		<form action="upload" method="POST">
+			<!-- text input / shown here -->
+			<div class="container">
+				<textarea name="text" value="" id="console">{{ Content }}</textarea>
+			</div>
+
+			<div class="functions">			
+				<button class="save">Save</button>
+			</div>
+		</form>
+	</body>
+</html>

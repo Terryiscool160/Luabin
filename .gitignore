@@ -1,0 +1,11 @@
+client_body_temp/
+.vscode/
+
+proxy_temp/
+uwsgi_temp/
+scgi_temp/
+
+root/files/*
+logs/*
+
+.env
