@@ -7,6 +7,8 @@ or just other general use such as sharing notes or code
 
 this was made i realised hastebin was not the best, and that it was slow as hell, as well as extremely bloated and inefficient
 
+# Self hosting
+you should make sure to edit `index.html` to change the `tor` url if you have one, or just leave it to default
 an example nginx config is as followed (the one in conf/ is only for development):
 ```nginx
 server {
@@ -31,6 +33,9 @@ server {
     }
 }
 ```
+
+# Instance list
+[Mine - UK](https://bin.terryiscool160.xyz) [Tor](bin.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion)
 
 # Development setup
 you'll need to download and install [openresty](https://openresty.org/en/) which should be familar to those who know nginx and lua quite well

@@ -25,25 +25,25 @@ textarea {
 	box-shadow: 0 0 2px red, inset 0 0 2px red;
 	border: 0.2vw solid #ff6666;
 	position: absolute;
-	padding: 10px 10px;
+	padding: 10px 10px 10px;
 	top: 10px;
 	right: 10px;
 }
 
-.save {
-	background: #252926;
+.clickable {
+	background: transparent;
 	color: #c3ef8f;
 
 	text-shadow: 0 0 1px #c3ef8f, 1px 1px 1px blue, -1px -1px 1px red;
 
-	font-size: 25px;
+	font-size: 20px;
 	cursor: pointer;
 	border: none;
 }
 
-.save:hover {
+.clickable:hover {
 	color: #fff;
-	text-shadow: 0 5px 15px #c3ef8f;
+	text-shadow: 0 5px 20px #c3ef8f;
 }
 
 .glitch {
@@ -52,6 +52,14 @@ textarea {
 	color: #c3ef8f;
 	animation: crt 5ms infinite;
 	text-shadow: 0 0 1px #c3ef8f, 1px 1px 1px blue, -1px -1px 1px red;
+}
+
+.footer {
+	text-align: center;
+    position: fixed;
+	width: 100vw;
+    bottom: 0;
+	left: 0;
 }
 
 a:link, a:visited {
