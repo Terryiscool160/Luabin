@@ -35,7 +35,7 @@ server {
 ```
 
 # Instance list
-[Mine - UK](https://bin.terryiscool160.xyz) [Tor](bin.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion)
+[Mine - UK](https://bin.terryiscool160.xyz) [Tor](http://bin.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion)
 
 # Development setup
 you'll need to download and install [openresty](https://openresty.org/en/) which should be familar to those who know nginx and lua quite well
