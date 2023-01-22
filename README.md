@@ -1,34 +1,42 @@
 # Luabin
 
-an extremely fast openresty based hastebin alternative
+an extremely fast openresty based hastebin alternative with no javascript 
 
-this is used for exporting a lot of information and making it easier to read (especially for sharing long log files)
-or just other general use stuff after i realised hastebin was not the best
+this is used for exporting a lot of information and making it easier to read for longer pieces of text
+or just other general use such as sharing notes or code
+
+this was made i realised hastebin was not the best, and that it was slow as hell, as well as extremely bloated and inefficient
 
 an example nginx config is as followed (the one in conf/ is only for development):
 ```nginx
-    server {
-        listen 80;
+server {
+    listen 80;
 
-        set $root /var/www/Luabin/root;
-        root $root;
+    set $root /var/www/Luabin/root;
+    root $root;
 
-        # Index endpoint
-        location @index {
-            content_by_lua_file $root/lua/index.lua;
-        }
-
-        # Upload endpoint
-        location /upload { 
-            content_by_lua_file $root/lua/upload.lua;
-        }
-
-        # Serve static files if they exist, or send to the index
-        location / { 
-            try_files $uri @index;
-        }
+    # Index endpoint
+    location @index {
+        content_by_lua_file $root/lua/index.lua;
     }
+
+    # Upload endpoint
+    location /upload { 
+        content_by_lua_file $root/lua/upload.lua;
+    }
+
+    # Serve static files if they exist, or send to the index
+    location / { 
+        try_files $uri @index;
+    }
+}
 ```
+
+# Development setup
+you'll need to download and install [openresty](https://openresty.org/en/) which should be familar to those who know nginx and lua quite well
+after that, ensure openresty is at least on your path etc, and run `./run.sh`, this will setup openresty to output logs to your current terminal
+and you should be able to reach the instance at `127.0.0.1:8080`, code caching is turned off for this configuration meaning any changes to the lua files
+will not require you to restart the openresty instance
 
 ### TODO
 - automatic rate limiter 
