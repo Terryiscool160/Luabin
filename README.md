@@ -34,9 +34,9 @@ server {
 
 # Development setup
 you'll need to download and install [openresty](https://openresty.org/en/) which should be familar to those who know nginx and lua quite well
-after that, ensure openresty is at least on your path etc, and run `./run.sh`, this will setup openresty to output logs to your current terminal
+after that, ensure openresty is at least on your path etc, and run `./run.sh`. this will setup openresty to output logs to your current terminal
 and you should be able to reach the instance at `127.0.0.1:8080`, code caching is turned off for this configuration meaning any changes to the lua files
-will not require you to restart the openresty instance
+will not require you to restart the openresty instance to see them change
 
 ### TODO
 - automatic rate limiter 
