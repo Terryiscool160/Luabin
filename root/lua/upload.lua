@@ -36,11 +36,11 @@ end
 --// Get method
 local Method = ngx.req.get_method()
 
-if Method ~= 'POST' then
-    ngx.header.content_type = 'text/plain'
+--// Set what we're returning
+ngx.header.content_type = 'text/plain'
 
+if Method ~= 'POST' then
     --// don't 
-    ngx.say('POST only endpoint')
     return ngx.exit(ngx.HTTP_BAD_REQUEST)
 end
 
@@ -52,8 +52,7 @@ local Body = ngx.req.get_body_data()
 --// Do presence check
 if Body == nil or Body == '' then
     --// Didn't provide any actual content
-    ngx.say('No content')
-    return ngx.exit(ngx.HTTP_BAD_REQUEST)
+    return ngx.say('No content')
 end
 
 if (string.match(Body, 'text=')) then
@@ -66,8 +65,7 @@ Body = ngx.unescape_uri(Body)
 
 --// Some checks for stuff
 if (string.len(Body) < 10 or string.len(Body) > 10000) then
-    ngx.say('Content < 10 or > 10_000')
-    return ngx.exit(ngx.HTTP_BAD_REQUEST)
+    return ngx.say('Content < 10 or > 10_000')
 end
 
 --// Handle actually making the file now

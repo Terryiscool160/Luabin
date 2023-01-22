@@ -38,6 +38,9 @@ after that, ensure openresty is at least on your path etc, and run `./run.sh`. t
 and you should be able to reach the instance at `127.0.0.1:8080`, code caching is turned off for this configuration meaning any changes to the lua files
 will not require you to restart the openresty instance to see them change
 
+the only dependancy of this project is [here](https://github.com/bungle/lua-resty-template), and you can install it via running 
+`opm get bungle/lua-resty-template`, (openresty should provide this binary)
+
 ### TODO
 - automatic rate limiter 
 - lua based capcha generator
